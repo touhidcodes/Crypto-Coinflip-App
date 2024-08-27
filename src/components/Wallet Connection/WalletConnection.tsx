@@ -7,11 +7,7 @@ const injected = new InjectedConnector({ supportedChainIds: [1, 3, 4, 5, 42] });
 const WalletConnection: React.FC = () => {
   const { activate, active, account, library } = useWeb3React();
 
-  useEffect(() => {
-    if (!active) {
-      activate(injected);
-    }
-  }, [active, activate]);
+
 
   return (
     <div>
